@@ -12,7 +12,7 @@ const socketServer = io(httpServer, { // sockets.io
 });
 
 const PORT = 3000;
-httpServer.listen(PORT);
+httpServer.listen(process.env.PORT || 3000);
 
 console.log(`Listening on port ${PORT}...`);
 sockets.listen(socketServer);
